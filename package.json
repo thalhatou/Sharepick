@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/thalhatou/Sharepick/issues"
   },
-  "homepage": "https://github.com/thalhatou/Sharepick#readme"
+  "homepage": "https://github.com/thalhatou/Sharepick#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
