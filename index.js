@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = new express()
-const  Sequelize = require("sequelize");
+const Sequelize = require("sequelize");
 const bodyParser = require('body-parser')
 app.use(express.static('public'))
 app.set('view engine','ejs')
@@ -10,18 +10,22 @@ const port = 8080
 const db = require('./models')
 
 //database connection
-const sqlPort = 3307;
-db.Sequelize
-    .sync({})
-    .then(() => {
-        app.listen(sqlPort, () => {
-            console.log('MariaDB connection was successful')
-        })
-    })
-    .catch((error) => {
-        console.error('unable to connect to mariaDB database')
-    })
 
+const sequelize = new Sequelize(
+    'photos',
+    'root',
+    'password1',
+    {
+        host: 'localhost',
+        dialect: 'mariadb'
+    }
+);
+
+sequelize.authenticate().then(() => {
+    console.log('Connection has been established successfully.');
+}).catch((error) => {
+    console.error('Unable to connect to the database: ', error);
+});
 
 // routes
 app.get('/', (request, response) => {
