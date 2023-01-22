@@ -1,8 +1,8 @@
 const { Sequelize, DataTypes } = require("sequelize");
 
 module.exports = (Sequelize, DataTypes) => {
-    const photos = Sequelize.define(
-        "photo",
+    const comments = Sequelize.define(
+        "comment",
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -12,20 +12,13 @@ module.exports = (Sequelize, DataTypes) => {
             userId: {
                 type: DataTypes.INTEGER
             },
-            title: {
-                type: DataTypes.STRING
+            photoId: {
+                type: DataTypes.INTEGER
             },
-            slug: {
-                type: DataTypes.STRING
-            },
-            description: {
-                type: DataTypes.STRING
-            },
-            medialocation: {
+            content: {
                 type: DataTypes.STRING
             }
-
         }
     );
-    return photos;
+    return comments;
 }
