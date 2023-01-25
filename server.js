@@ -1,11 +1,11 @@
 const express = require('express')
-const path = require('path')
+// const path = require('path')
 const app = new express()
 const Sequelize = require("sequelize");
 const bodyParser = require('body-parser')
 app.use(express.static('public'))
-app.set('view engine','ejs')
-const port = 8080
+app.set('view engine', 'ejs')
+const port = 7000
 // database
 const db = require('./models')
 
@@ -13,8 +13,8 @@ const db = require('./models')
 
 const sequelize = new Sequelize(
     'photos',
-    'root',
-    'password1',
+    'thalhatou',
+    '7y8a1h64',
     {
         host: 'localhost',
         dialect: 'mariadb'

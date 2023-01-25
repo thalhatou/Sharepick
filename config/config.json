@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "root",
-    "password":"passoword1",
+    "username": "thalhatou",
+    "password":"7y8a1h64",
     "database": "photos",
     "host": "127.0.0.1",
     "dialect": "mariadb"
   },
   "test": {
-    "username": "root",
-    "password":"passoword1",
+    "username": "thalhatou",
+    "password":"7y8a1h64",
     "database": "photos",
     "host": "127.0.0.1",
     "dialect": "mariadb"
   },
   "production": {
-    "username": "root",
-    "password":"passoword1",
+    "username": "thalhatou",
+    "password":"7y8a1h64",
     "database": "photos",
     "host": "127.0.0.1",
     "dialect": "mariadb"
